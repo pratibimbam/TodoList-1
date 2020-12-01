@@ -1,0 +1,29 @@
+.add-list {
+  border: rgb(223, 221, 221) 4px solid;
+  border-radius: 5px;
+  background-color: rgb(223, 221, 221);
+  opacity: 0.5;
+  min-width: 400px;
+  min-height: 400px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.1),
+    2px 6px 10px 0 rgba(0, 0, 0, 0.31);
+}
+
+.add-list:hover {
+  background-color: #fff;
+  transition: 0.3s;
+  font-size: 23px;
+}
+
+.add-list:nth-child(0) {
+  transform: rotate(180deg);
+}
+
+.plus {
+  font-size: 2em;
+}

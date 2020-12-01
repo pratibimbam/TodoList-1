@@ -1,7 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
+import AddListForm from "./AddListForm";
+import "./AddList.css";
 
 function AddList() {
-  return <div></div>;
+  const [showListForm, setShowListForm] = useState(false);
+
+  function handleClickAdd() {
+    setShowListForm(true);
+  }
+
+  return (
+    <>
+      {!showListForm ? (
+        <div className="add-list" onClick={handleClickAdd}>
+          <span className="plus">+</span>
+        </div>
+      ) : (
+        <AddListForm
+          showListForm={showListForm}
+          setShowListForm={setShowListForm}
+        />
+      )}
+    </>
+  );
 }
 
 export default AddList;

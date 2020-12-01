@@ -1,0 +1,72 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: rgba(0, 0, 0, 0) 2px solid;
+  border-radius: 5px;
+  min-width: 400px;
+  min-height: 400px;
+  width: 20vw;
+  margin: 10px;
+  box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.1),
+    2px 6px 10px 0 rgba(0, 0, 0, 0.31);
+}
+
+.list-form-h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 5px;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #111;
+}
+
+.list-form-input {
+  width: 60%;
+  color: rgba(17, 17, 17, 0.863);
+  background-color: #fff;
+  font-size: 15px;
+  padding: 8px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  font-family: "Playfair Display", serif;
+  outline: none;
+}
+
+.list-form-input:hover {
+  border: 2px solid rgb(229, 233, 6);
+  background-image: url(../img/flower-power.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.listform-buttons {
+  display: flex;
+}
+
+.listform-buttons button {
+  padding: 6px 12px;
+  margin: 20px 20px 0 20px;
+  border-radius: 4px;
+  color: #e6d0a6;
+  background-color: #448e90;
+  border: 2px solid #e6d0a6;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  outline: none;
+}
+
+.listform-buttons button:hover {
+  color: #448e90;
+  background-color: #d3bd94;
+  border: 2px solid #448e90;
+  transition: 0.3s;
+  transform: scale(1.1);
+}

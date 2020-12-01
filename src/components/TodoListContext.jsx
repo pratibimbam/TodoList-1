@@ -5,19 +5,22 @@ export const TodoListContext = createContext();
 
 export function TodoListProvider(props) {
   const [todoLists, setTodoLists] = useState(todoListsDefault);
-  const [allTodos, setAllTodos] = useState([]);
 
   useEffect(() => {
-    let allTds = todoLists.map((list) => list.todos);
-    allTds = [].concat(...allTds);
-    setAllTodos(allTds);
+    const localData = localStorage.getItem("todoLists");
+    if (localData) {
+      setTodoLists(JSON.parse(localData));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("todoLists", JSON.stringify(todoLists));
   }, [todoLists]);
 
   return (
     <TodoListContext.Provider
       value={{
         todoListsContext: [todoLists, setTodoLists],
-        allTodosContext: [allTodos, setAllTodos],
       }}
     >
       {props.children}
